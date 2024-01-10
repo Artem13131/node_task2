@@ -1,14 +1,13 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const homeController = require("../controllers/homeController.js");
-
-const router = express.Router();
-
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
+var express = require("express");
+const articleController = require("../controllers/articleController.js");
+var router = express.Router();
+var bodyParser = require('body-parser'); 
 const jsonParser = express.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
-router.get('/', articleController.getArticleAll);
-router.get('/:idArticle', articleController.getArticle)
+router.get('/',articleController.getArticleAll); 
+router.get('/:idArticle',articleController.getArticle);
 
-module.exports = router;
+
+module. exports = router;
