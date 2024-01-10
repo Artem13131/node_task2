@@ -1,16 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const homeController = require("../controllers/homeController.js");
-
-const router = express.Router();
-
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
+var express = require('express');
+const adminController = require("../controllers/adminController.js");
+var router = express.Router();
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false }); 
 const jsonParser = express.json();
 
-router.get('/',adminController.getarticle);
-router.get('/:idArticle',adminController.getArticle)
-router.post('/addArticle',adminController.addArticle);
-router.post('/editArticle',adminController.editArticle);
-router.post('/deleteArticle', adminController.deleteArticle);
+//Комментарий из ветки моделей
+router.get('/',adminController.getArticleAll);
+router.get('/:idArticle',adminController.getArticle);
+router.post('/addArticle',adminController.addArticle); 
+router.post('/editArticle', adminController.editArticle); 
+router.post('/deleteArticle',adminController.deleteArticle);
 
 module.exports = router;
