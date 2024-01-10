@@ -1,4 +1,4 @@
-const Models = require("../models/adminModel.js");
+const Models = require("../moduls/adminModul.js");
 
 exports.getArticleAll = async function(req, res){
     let m=await Models.getAll(); 

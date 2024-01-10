@@ -1,4 +1,4 @@
-const Models = require("../models/articleModel.js");
+const Models = require("../moduls/articleModul.js");
 ports.addArticle = function (request, response) {
     response.send("Добавление статьи");
 };
