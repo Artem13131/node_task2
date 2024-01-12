@@ -52,7 +52,7 @@
                     alert("Данные изменены");
 
                     // Загрузка обновленных данных и их отображение на странице
-                    const updatedDataResponse = await fetch(`http://localhost:3000/article/${article.idArticle}`);
+                    const updatedDataResponse = await fetch(`http://localhost:3000/admin/${article.idArticle}`);
                     const updatedData = await updatedDataResponse.text();
 
                     // Замена содержимого элемента с id "articleContent" на обновленные данные

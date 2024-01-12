@@ -30,13 +30,15 @@ exports.getOne = async function(req, res) {
     .catch(err => {
     console.log(err);
     });
+    console.log("arr"+arr)
     return arr;
 };
 
 exports.addOne = async function(req, res) {
 
     let sql = "insert into article values('',?,?,?)";
-    filter = [req.titleArticle, req.textArticle, req.desriptionArticle];
+    console.log("art"+req.textArticle)
+    filter = [req.titleArticle, req.textArticle, req.descriptionArticle];
     await connection.query(sql,filter)
     .then (data => {
     })
@@ -47,8 +49,8 @@ exports.addOne = async function(req, res) {
 
 exports.editOne = async function(req, res) {
     let arr = [];
-    let sql = "update article set titleArticle=?, textArticle=? where idArticle=?";
-    filter = [req.titleArticle, req.textArticle, req.desriptionArticle, +req.idArticle];
+    let sql = "update article set titleArticle=?, textArticle=?,descriptionArticle=? where idArticle=?";
+    filter = [req.titleArticle, req.textArticle, req.descriptionArticle, +req.idArticle];
     await connection.query(sql,filter)
     .then (data => {
         for (let i = 0; i < data[0].length; i++)

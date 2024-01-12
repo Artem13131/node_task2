@@ -15,7 +15,7 @@
     <div class="form">
         <h2>Добавить статью</h2>
 
-    <form action="http://localhost:3000/admin/addArticle" method="post"> 
+    <form action="#" method="post"> 
         <label for="titleArticle">Название статьи</label> 
         <input type="text" name="titleArticle" id="titleArticle" required> 
         <p>
@@ -26,17 +26,18 @@
             <label for="descriptionArticle">Описание статьи</label>
             <input type="text" name="descriptionArticle" id="descriptionArticle">
         </p>
-        <button type="submit" id="sendArticle">Создать статью</button> 
+        <button type="button" id="sendArticle">Создать статью</button> 
     </form>
     <script>
         document.querySelector("#sendArticle").onclick=function()
         {
-            event.stopPropagation();
+            event.preventDefault();
             let article={
                 'titleArticle':document.querySelector("#titleArticle").value, 
                 'textArticle':document.querySelector("#textArticle").value, 
                 'descriptionArticle':document.querySelector("#descriptionArticle").value,
-        }
+        };
+        alert(article.textArticle)
         let promise=fetch('http://localhost:3000/admin/addArticle',{
                 method: 'POST',
                 headers: {
