@@ -5,6 +5,10 @@ body {
     margin: 0;
     padding: 0;
 }
+a {
+    text-decoration: none;
+    color:rgb(255, 17, 0);
+}
 
 
 /* Стили для статей */
@@ -71,7 +75,7 @@ body {
 /* Стили для форм добавления и редактирования статьи */
 .form {
     margin-top: 20px;
-    border: 5px solid #99d6df;
+    border: 5px solid #4eea2b;
     padding: 20px;
     
 }
