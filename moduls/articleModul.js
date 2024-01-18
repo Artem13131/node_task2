@@ -23,7 +23,7 @@ exports.getOne = async function(res, req, idArticle){
     let arr = [];
     let sql = "select * from article where idArticle=?";
     console.log(req);
-    filter = [req];
+    filter = [res];
     console.log(req);
     await connection.query(sql, filter)
     .then(data => {
