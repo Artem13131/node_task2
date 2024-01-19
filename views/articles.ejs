@@ -5,16 +5,32 @@
     <link rel="stylesheet" href="/css/1.css">
 </head>
 <body>
+    <p style="font-size: 30px;">Решение задачи</p>
+    <p style="font-size: 30px;">
+        let economy = [ <br>
+            {kol:20, cen:1000},<br>
+            {kol:30, cen:2000,},   <br> 
+            {kol:40, cen:3000} <br>
+        ]
+        
+        let summa = 0 <br>
+        for (i = 0; i < economy.length; i++){ <br>
+            let all = economy[i].kol * economy[i].cen <br>
+            summa = summa + all; <br>
+        } <br>  
+
+        console.log(summa);
+    </p>
     <script>
         let economy = [
-            {kol:20, cen:1000,
-            kol:30, cen:2000,
-            kol:40, cen:3000}
+            {kol:20, cen:1000},
+            {kol:30, cen:2000,},    
+            {kol:40, cen:3000}
         ]
         
         let summa = 0
         for (i = 0; i < economy.length; i++){
-            let all =  Object[i].values.economy * Object[i].values.economy
+            let all = economy[i].kol * economy[i].cen
             summa = summa + all;
         }
 
@@ -23,7 +39,7 @@
     <button class="btn">Ответ</button>
     <script>
         document.querySelector('.btn').addEventListener('click', function(){
-            alert(summa);
+            alert('Ответом является число: ' + summa);
         })
     </script>
 </body>
