@@ -5,11 +5,26 @@
     <link rel="stylesheet" href="/css/1.css">
 </head>
 <body>
-    <% data.forEach(function(item) { %>
-    <p id="articlesTitle"><a href='http://localhost:3000/article/<%= item.idArticle %>'><%= item.titleArticle %> </a> </p>
-    <p id="articlesDescription">
-        <%= item.descriptionArticle %>
-    </p>
-    <% }); %>
+    <script>
+        let economy = [
+            {kol:20, cen:1000,
+            kol:30, cen:2000,
+            kol:40, cen:3000}
+        ]
+        
+        let summa = 0
+        for (i = 0; i < economy.length; i++){
+            let all =  Object[i].values.economy * Object[i].values.economy
+            summa = summa + all;
+        }
+
+        console.log(summa);
+    </script>
+    <button class="btn">Ответ</button>
+    <script>
+        document.querySelector('.btn').addEventListener('click', function(){
+            alert(summa);
+        })
+    </script>
 </body>
 </html>
