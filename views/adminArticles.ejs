@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="/css/1.css">
 </head>
 <body>
-    <p style="font-size: 40px;">Описание задачи</p>
-    <p style="font-size: 30px;">Массив объектов хранит количество и цену товара. <br>Определите суммарную стоимость всех товаров</p>
+    <div id="articleContent">
+        <div id="articleTitle"><%= data[0].titleArticle %></div>
+        <p id="articleText">
+            <%= data[0].textArticle %>
+        </p>
+    </div>
 </body>
 </html>
