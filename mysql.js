@@ -1,8 +1,8 @@
 const mysql = require("mysql2");
 connection = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    database: "article",
+    user: "sqlite3",
+    database: "library.db",
     password: ""
   }).promise();
   connection.connect(function(err){
