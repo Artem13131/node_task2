@@ -1,9 +1,5 @@
-const mysql = require("mysql2");
+const mysql = require("sqlite");
 connection = mysql.createConnection({
-    host: "localhost",
-    user: "sqlite3",
-    database: "library.db",
-    password: ""
   }).promise();
   connection.connect(function(err){
     if (err) {
